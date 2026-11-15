@@ -1,12 +1,272 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=Incursion_Terminal.html">
-  <title>Incursion Red River — Item List</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Incursion Red River Item List</title>
+<meta name="description" content="Search exact vendor row IDs and read community weapon builds as slot-by-slot schematics for Incursion Red River.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%2339ff88' stroke-width='2'/%3E%3Cpath d='M16 3v6M16 23v6M3 16h6M23 16h6' stroke='%2339ff88' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%2339ff88'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#030504;--bg-2:#050a07;--text:#d7ffe2;--muted:#9dc4ab;--dim:#7fa68c;
+  --line:rgba(126,226,162,.16);--line-strong:rgba(126,226,162,.3);
+  --accent:#39ff88;--accent-soft:rgba(57,255,136,.11);--cyan:#72d6ff;
+  --mono:ui-monospace,"Cascadia Mono","SFMono-Regular",Consolas,monospace;
+  --sans:"Segoe UI Variable Display","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{
+  margin:0;min-height:100dvh;background:var(--bg);
+  color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--accent);color:#02110a}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+*{scrollbar-width:thin;scrollbar-color:rgba(57,255,136,.28) transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:rgba(57,255,136,.24);border:2px solid var(--bg);border-radius:99px}
+a{color:var(--cyan);text-decoration:none;text-underline-offset:3px}
+a:hover{text-decoration:underline}
+button{font-family:inherit}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.topbar{height:58px;display:flex;align-items:center;gap:22px;padding:0 18px;border-bottom:1px solid var(--line);background:var(--bg)}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);flex:none}
+.brand:hover{text-decoration:none}
+.brand-mark{width:26px;height:26px;color:var(--accent);display:block}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-text strong{font:600 14px/1.1 var(--sans)}
+.brand-text span{font:11px/1.2 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.topnav{display:flex;align-items:center;gap:2px;margin-left:4px}
+.topnav a{display:flex;align-items:center;height:34px;padding:0 12px;border-radius:7px;font:600 12px var(--sans);color:var(--muted)}
+.topnav a:hover{color:var(--text);background:rgba(57,255,136,.06);text-decoration:none}
+.topnav a[aria-current="page"]{color:var(--text);background:var(--accent-soft);box-shadow:inset 0 -2px 0 var(--accent)}
+.topbar-meta{margin-left:auto;display:flex;align-items:center;gap:8px;font:11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.lang-switch{display:inline-flex;border:1px solid var(--line-strong);border-radius:7px;overflow:hidden;flex:none;margin-left:auto}
+.lang-switch button{appearance:none;border:0;background:none;color:var(--muted);font:11px var(--mono);letter-spacing:.04em;padding:5px 8px;cursor:pointer}
+.lang-switch button+button{border-left:1px solid var(--line)}
+.lang-switch button:hover{color:var(--text);background:rgba(57,255,136,.06)}
+.lang-switch button[aria-pressed="true"]{background:var(--accent-soft);color:var(--text)}
+.topbar .lang-switch + .topbar-meta{margin-left:10px}
+
+.hub{max-width:1180px;min-height:calc(100dvh - 58px);margin:0 auto;padding:54px 26px 30px;display:flex;flex-direction:column}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:34px;align-items:center;padding-bottom:38px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:clamp(36px,5vw,64px);line-height:.98;letter-spacing:-.04em;font-weight:650;max-width:13ch;text-wrap:balance}
+html[lang="zh-CN"] h1{font-size:clamp(32px,4.2vw,52px);line-height:1.08;letter-spacing:-.02em;max-width:17ch}
+.hero-copy p{margin:20px 0 0;max-width:56ch;color:var(--muted);font-size:15px;line-height:1.6}
+.facts{margin:22px 0 0;font:11.5px var(--mono);letter-spacing:.03em;color:var(--muted)}
+.hero-rig{width:100%;max-width:520px;justify-self:end;color:rgba(57,255,136,.62)}
+.hero-rig .body{fill:rgba(57,255,136,.05)}
+.hero-rig .detail{stroke:rgba(57,255,136,.32);stroke-width:1;fill:none}
+.hero-rig .tick{stroke:rgba(57,255,136,.18);stroke-width:1}
+.hero-rig .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s cubic-bezier(.16,1,.3,1) .1s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+.paths{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:18px;margin-top:30px;margin-bottom:30px}
+.path{position:relative;display:flex;flex-direction:column;gap:9px;padding:22px;border:1px solid var(--line);border-radius:12px;background:rgba(5,10,7,.58);color:var(--text);overflow:hidden;transition:border-color .16s ease,background .16s ease}
+.path:hover{text-decoration:none;border-color:rgba(57,255,136,.46);background:rgba(57,255,136,.055)}
+.path strong{font-size:clamp(20px,2vw,27px);line-height:1.1;letter-spacing:-.025em;font-weight:650;padding-right:12px}
+.path .surface{display:inline-flex;align-items:center;align-self:flex-start;height:20px;padding:0 7px;border:1px solid var(--line-strong);border-radius:4px;font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.path p{margin:0;max-width:44ch;color:var(--muted);font-size:12.5px;line-height:1.55}
+.path-cta{display:flex;align-items:center;gap:7px;margin-top:6px;font:600 12px var(--sans);color:var(--accent)}
+.path-cta svg{transition:transform .16s ease}
+.path:hover .path-cta svg{transform:translateX(3px)}
+.path-main{min-height:220px;justify-content:flex-end}
+.path-main .mini{position:absolute;right:8px;top:16px;width:56%;max-width:310px;color:rgba(57,255,136,.5);pointer-events:none}
+.path-main .mini .body{fill:rgba(57,255,136,.04)}
+.path-side{justify-content:flex-end;background:rgba(3,6,4,.4)}
+.hub-foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font:11.5px/1.6 var(--mono);color:var(--muted);padding-bottom:0}
+.hub-foot p{margin:0;max-width:78ch}
+.hub-foot a{color:var(--muted)}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:18px}
+  .hero-rig{order:-1;max-width:420px;justify-self:start;width:88%}
+  .paths{grid-template-columns:1fr}
+  .path-main{min-height:0}
+  .path-main .mini{position:static;width:70%;max-width:280px;margin:2px 0 4px;align-self:flex-end}
+}
+@media(max-width:640px){
+  .hub{padding:32px 16px 24px}
+  .topbar{gap:10px;padding:0 12px}
+  .topnav a{padding:0 9px;font-size:11px}
+  .topbar-meta{display:none}
+  .brand-text span{display:none}
+  h1{font-size:38px}
+  .path{padding:18px}
+  .path strong{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-delay:0ms !important;transition-duration:.001ms !important}
+  .hero-rig .draw{stroke-dashoffset:0}
+}
+</style>
 </head>
 <body>
-  <p><a href="Incursion_Terminal.html">Open the Incursion Red River item list</a>.</p>
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="Incursion Red River Item List home" data-i18n-aria-label="home_label">
+    <svg class="brand-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <circle cx="16" cy="16" r="9"/><path d="M16 3v6M16 23v6M3 16h6M23 16h6"/><circle cx="16" cy="16" r="2.2" fill="currentColor" stroke="none"/>
+    </svg>
+    <span class="brand-text"><strong>Incursion Red River</strong><span data-i18n="brand_sub">Item List</span></span>
+  </a>
+  <nav class="topnav" aria-label="Site" data-i18n-aria-label="nav_label">
+    <a href="builds.html" data-i18n="nav_builds">Build bench</a>
+    <a href="Incursion_Terminal.html" data-i18n="nav_terminal">Item terminal</a>
+  </nav>
+  <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria-label="lang_label">
+    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+  </div>
+  <div class="topbar-meta"><span class="dot"></span><span data-i18n="status">Static / offline</span></div>
+</header>
+
+<main class="hub">
+  <section class="hero">
+    <div class="hero-copy">
+      <h1 data-i18n="h1">Item IDs and weapon builds, ready for the console.</h1>
+      <p data-i18n="intro">Search the exact vendor row names, or read a community build as a slot-by-slot schematic and copy its command.</p>
+      <p class="facts" data-i18n="facts">38 weapon presets · 3 accessory kits · 825 exact vendor row IDs</p>
+    </div>
+    <svg class="hero-rig" viewBox="0 0 520 200" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+      <g class="body">
+        <path d="M34 98 L84 86 L94 86 L94 122 L42 114 Z"/>
+        <rect x="94" y="84" width="188" height="36" rx="3"/>
+        <rect x="282" y="92" width="120" height="18" rx="2"/>
+        <rect x="402" y="97" width="74" height="8"/>
+        <rect x="476" y="90" width="26" height="22" rx="3"/>
+        <path d="M150 120 L198 120 L192 172 L154 172 Z"/>
+        <path d="M110 120 L148 120 L138 160 L104 160 Z"/>
+        <rect x="150" y="62" width="72" height="16" rx="2"/>
+      </g>
+      <g class="detail">
+        <path d="M160 78 L160 84 M212 78 L212 84"/>
+        <path d="M150 120 Q150 142 178 142"/>
+        <path class="draw" pathLength="1" d="M282 112 L360 112"/>
+        <path class="draw" pathLength="1" d="M282 88 L290 84 M282 100 L290 104"/>
+        <circle cx="126" cy="103" r="3"/>
+      </g>
+      <g class="tick">
+        <path d="M60 178h88M60 174v8M148 174v8"/>
+        <path d="M402 178h100M402 174v8M502 174v8"/>
+        <path d="M250 26v20M246 26h8M246 46h8"/>
+      </g>
+    </svg>
+  </section>
+
+  <nav class="paths" aria-label="Choose a surface" data-i18n-aria-label="paths_label">
+    <a class="path path-main" href="builds.html">
+      <svg class="mini" viewBox="0 0 520 200" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+        <g class="body">
+          <path d="M34 98 L84 86 L94 86 L94 122 L42 114 Z"/>
+          <rect x="94" y="84" width="188" height="36" rx="3"/>
+          <rect x="282" y="92" width="120" height="18" rx="2"/>
+          <rect x="402" y="97" width="74" height="8"/>
+          <rect x="476" y="90" width="26" height="22" rx="3"/>
+          <path d="M150 120 L198 120 L192 172 L154 172 Z"/>
+          <path d="M110 120 L148 120 L138 160 L104 160 Z"/>
+          <rect x="150" y="62" width="72" height="16" rx="2"/>
+        </g>
+      </svg>
+      <strong data-i18n="primary_title">Read a build as a schematic</strong>
+      <p data-i18n="primary_copy">Parts hang off the receiver by slot, with the source stat reading and one copy button for the whole command.</p>
+      <span class="path-cta"><span data-i18n="primary_cta">Open the bench</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="path path-side" href="Incursion_Terminal.html">
+      <strong data-i18n="secondary_title">Search the item terminal</strong>
+      <p data-i18n="secondary_copy">825 exact row names, searchable, with per-item and per-quantity AddItem commands.</p>
+      <span class="path-cta"><span data-i18n="secondary_cta">Open the terminal</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+  </nav>
+
+  <footer class="hub-foot">
+    <p data-i18n="provenance">Catalog reconciled against the DT_Vendor_Old export; builds by Firestar. Attachment fit and in-game command success are not verified.</p>
+    <p><a href="README.md" data-i18n="readme">README</a> · <a href="https://github.com/lisniuse/Incursion-Red-River-Item-List" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+</main>
+
+<script>
+const I18N = {
+  en: {
+    site_title: 'Incursion Red River Item List',
+    brand_sub: 'Item List',
+    nav_label: 'Site',
+    nav_builds: 'Build bench',
+    nav_terminal: 'Item terminal',
+    status: 'Static / offline',
+    lang_label: 'Language',
+    home_label: 'Incursion Red River Item List home',
+    h1: 'Item IDs and weapon builds, ready for the console.',
+    intro: 'Search the exact vendor row names, or read a community build as a slot-by-slot schematic and copy its command.',
+    facts: '38 weapon presets · 3 accessory kits · 825 exact vendor row IDs',
+    paths_label: 'Choose a surface',
+    surface_builds: 'Build bench',
+    primary_title: 'Read a build as a schematic',
+    primary_copy: 'Parts hang off the receiver by slot, with the source stat reading and one copy button for the whole command.',
+    primary_cta: 'Open the bench',
+    surface_terminal: 'Item terminal',
+    secondary_title: 'Search the item terminal',
+    secondary_copy: '825 exact row names, searchable, with per-item and per-quantity AddItem commands.',
+    secondary_cta: 'Open the terminal',
+    provenance: 'Catalog reconciled against the DT_Vendor_Old export; builds by Firestar. Attachment fit and in-game command success are not verified.',
+    readme: 'README'
+  },
+  zh: {
+    site_title: 'Incursion Red River 物品列表',
+    brand_sub: '物品列表',
+    nav_label: '站点',
+    nav_builds: '改装台',
+    nav_terminal: '物品终端',
+    status: '静态 / 离线',
+    lang_label: '语言',
+    home_label: 'Incursion Red River 物品列表首页',
+    h1: '物品 ID 与改装方案，复制即可进控制台。',
+    intro: '查询精确的供应商行名，或按槽位阅读社区改装方案，并复制整套控制台命令。',
+    facts: '38 套武器方案 · 3 个附件包 · 825 个精确供应商行名',
+    paths_label: '选择页面',
+    surface_builds: '改装台',
+    primary_title: '按槽位阅读改装方案',
+    primary_copy: '配件从机匣按槽位展开，附原表属性读数，整条命令一键复制。',
+    primary_cta: '进入改装台',
+    surface_terminal: '物品终端',
+    secondary_title: '搜索物品终端',
+    secondary_copy: '825 个精确行名，可搜索，支持单件与按数量复制 AddItem 命令。',
+    secondary_cta: '进入物品终端',
+    provenance: '物品目录已与 DT_Vendor_Old 导出表核对；改装方案来自 Firestar。配件适配与游戏内命令成功率未经验证。',
+    readme: '说明文档'
+  }
+};
+let lang = 'en';
+try {
+  const requested = new URLSearchParams(location.search).get('lang');
+  const saved = localStorage.getItem('irr-lang');
+  if (saved === 'en' || saved === 'zh') lang = saved;
+  else if (requested === 'en' || requested === 'zh') lang = requested;
+  else if ((navigator.language || '').toLowerCase().startsWith('zh')) lang = 'zh';
+} catch (error) { /* ignore */ }
+
+function t(key){
+  return (I18N[lang] && I18N[lang][key] !== undefined) ? I18N[lang][key] : (I18N.en[key] || key);
+}
+function apply(){
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  for (const el of document.querySelectorAll('[data-i18n]')) el.textContent = t(el.dataset.i18n);
+  for (const el of document.querySelectorAll('[data-i18n-aria-label]')) el.setAttribute('aria-label', t(el.dataset.i18nAriaLabel));
+  for (const button of document.querySelectorAll('.lang-switch button')) button.setAttribute('aria-pressed', String(button.dataset.lang === lang));
+  document.title = t('site_title');
+}
+function setLang(next){
+  if (next !== 'en' && next !== 'zh') return;
+  lang = next;
+  try { localStorage.setItem('irr-lang', lang); } catch (error) { /* ignore */ }
+  apply();
+}
+document.querySelector('.lang-switch').addEventListener('click', (event) => {
+  const button = event.target.closest('button[data-lang]');
+  if (button) setLang(button.dataset.lang);
+});
+apply();
+</script>
 </body>
 </html>

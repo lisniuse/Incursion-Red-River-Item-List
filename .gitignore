@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.impeccable/chrome-*/
+.impeccable/review/
+.impeccable/detect.json
+.impeccable/builds-brief.md

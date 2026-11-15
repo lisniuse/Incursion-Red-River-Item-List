@@ -1,0 +1,514 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-15T19:48:43+08:00",
+  "title": "Design System: Incursion Red River Item List",
+  "extensions": {
+    "colorMeta": {
+      "phosphor-green": {
+        "role": "primary",
+        "displayName": "Phosphor Green",
+        "canonical": "#39ff88",
+        "tonalRamp": [
+          "#001004",
+          "#002a10",
+          "#00481f",
+          "#007839",
+          "#00ab54",
+          "#00db6d",
+          "#38ff88",
+          "#c7ffd3"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Phosphor Bloom",
+        "canonical": "#63ffa3",
+        "tonalRamp": [
+          "#001005",
+          "#002a13",
+          "#004724",
+          "#007740",
+          "#00ab5f",
+          "#2fd87f",
+          "#5dfa9e",
+          "#c5ffd7"
+        ]
+      },
+      "phosphor-wash": {
+        "role": "primary",
+        "displayName": "Phosphor Wash",
+        "canonical": "rgba(57, 255, 136, 0.11)",
+        "tonalRamp": [
+          "#001004",
+          "#002a10",
+          "#00481f",
+          "#007839",
+          "#00ab54",
+          "#00db6d",
+          "#38ff88",
+          "#c7ffd3"
+        ]
+      },
+      "signal-cyan": {
+        "role": "secondary",
+        "displayName": "Signal Cyan",
+        "canonical": "#72d6ff",
+        "tonalRamp": [
+          "#000d15",
+          "#002633",
+          "#004156",
+          "#006d8e",
+          "#329cc3",
+          "#61c5ee",
+          "#a1e2ff",
+          "#daf3ff"
+        ]
+      },
+      "measure-amber": {
+        "role": "tertiary",
+        "displayName": "Measure Amber",
+        "canonical": "#ffca6b",
+        "tonalRamp": [
+          "#120900",
+          "#2e1e00",
+          "#4e3600",
+          "#825b00",
+          "#b78519",
+          "#e2ae4d",
+          "#ffcf7c",
+          "#ffeccc"
+        ]
+      },
+      "void-black": {
+        "role": "neutral",
+        "displayName": "Void Black",
+        "canonical": "#030504",
+        "tonalRamp": [
+          "#090c0a",
+          "#1f2321",
+          "#373c3a",
+          "#606562",
+          "#8b918e",
+          "#b3b9b6",
+          "#d3d9d6",
+          "#eaf0ed"
+        ]
+      },
+      "panel-black": {
+        "role": "neutral",
+        "displayName": "Panel Black",
+        "canonical": "#050a07",
+        "tonalRamp": [
+          "#070d09",
+          "#1d2320",
+          "#353d38",
+          "#5e6561",
+          "#89928d",
+          "#b1bab5",
+          "#d1dad5",
+          "#e8f1ec"
+        ]
+      },
+      "phosphor-ink": {
+        "role": "neutral",
+        "displayName": "Phosphor Ink",
+        "canonical": "#d7ffe2",
+        "tonalRamp": [
+          "#001004",
+          "#052914",
+          "#21432d",
+          "#496d54",
+          "#759a7f",
+          "#9cc2a7",
+          "#bce3c7",
+          "#d2fadd"
+        ]
+      },
+      "muted-sage": {
+        "role": "neutral",
+        "displayName": "Muted Sage",
+        "canonical": "#9dc4ab",
+        "tonalRamp": [
+          "#000f05",
+          "#042917",
+          "#20432f",
+          "#496d57",
+          "#749a82",
+          "#9bc2a9",
+          "#bbe3c9",
+          "#d2fae0"
+        ]
+      },
+      "dim-sage": {
+        "role": "neutral",
+        "displayName": "Dim Sage",
+        "canonical": "#7fa68c",
+        "tonalRamp": [
+          "#000f05",
+          "#032915",
+          "#1f432d",
+          "#486d55",
+          "#739a80",
+          "#9bc3a8",
+          "#bae3c8",
+          "#d1fbde"
+        ]
+      },
+      "command-ink": {
+        "role": "neutral",
+        "displayName": "Command Ink",
+        "canonical": "#c3ebd0",
+        "tonalRamp": [
+          "#000f05",
+          "#042916",
+          "#20432e",
+          "#496d56",
+          "#749a81",
+          "#9cc2a8",
+          "#bbe3c8",
+          "#d2fadf"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(126, 226, 162, 0.16)",
+        "tonalRamp": [
+          "#001005",
+          "#002a13",
+          "#004725",
+          "#007741",
+          "#40a66a",
+          "#6cd091",
+          "#8df1b0",
+          "#c5ffd7"
+        ]
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "rgba(126, 226, 162, 0.3)",
+        "tonalRamp": [
+          "#001005",
+          "#002a13",
+          "#004725",
+          "#007741",
+          "#40a66a",
+          "#6cd091",
+          "#8df1b0",
+          "#c5ffd7"
+        ]
+      },
+      "on-accent": {
+        "role": "neutral",
+        "displayName": "On-Accent",
+        "canonical": "#02110a",
+        "tonalRamp": [
+          "#010f08",
+          "#14261e",
+          "#2d3f37",
+          "#55695f",
+          "#80958b",
+          "#a7bdb3",
+          "#c7ded3",
+          "#def5ea"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hub headline only; clamped 36-64px, sentence case, tight -0.04em tracking, relaxed to -0.02em in Chinese."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Selected build name on the bench; 26-38px, tightening to 28px below 640px."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Hub branch-card titles; 20-27px. Panel names stay at 12-13px and are not this step."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose and guidance in the system sans at 14px/1.5, with narrower measures for supporting copy."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Button, nav, and copy-bar labels at 12px/600 sans; rail names sit one step up at 13px/600."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field and section labels: 11px mono uppercase with 0.08-0.16em tracking."
+      },
+      "measure": {
+        "displayName": "Measure",
+        "purpose": "The amber stat pair only: 44px/600 mono, tabular numerals, -0.035em tracking."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Command preview and long machine strings: 11.5px/1.55 mono."
+      }
+    },
+    "shadows": [
+      {
+        "name": "active-underline",
+        "value": "inset 0 -2px 0 #39ff88",
+        "purpose": "Pressed top-nav links and segmented-control options; separates current from hovered."
+      },
+      {
+        "name": "focus-ring",
+        "value": "0 0 0 1px rgba(114, 214, 255, 0.35)",
+        "purpose": "Search field focus, paired with a cyan border."
+      },
+      {
+        "name": "toast-lift",
+        "value": "0 10px 30px rgba(0, 0, 0, 0.45)",
+        "purpose": "The transient copy-confirmation toast; the only cast shadow in the product."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Trace draw, node entrance, drawer slide, and the hub schematic draw."
+      },
+      {
+        "name": "ease-standard",
+        "value": "ease",
+        "purpose": "Color, border, background, and opacity state changes."
+      },
+      {
+        "name": "hover",
+        "value": "140ms ease",
+        "purpose": "Slot, card, and control hover."
+      },
+      {
+        "name": "press",
+        "value": "60ms ease",
+        "purpose": "Primary button 1px active translate."
+      },
+      {
+        "name": "trace-draw",
+        "value": "550ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Schematic branch trace drawing, staggered 22ms per node."
+      },
+      {
+        "name": "node-in",
+        "value": "400ms ease",
+        "purpose": "Slot and kit node entrance, staggered 16ms, delayed 380ms after its trace."
+      },
+      {
+        "name": "drawer",
+        "value": "220ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Mobile weapon-rail drawer."
+      },
+      {
+        "name": "toast",
+        "value": "160ms ease",
+        "purpose": "Toast fade and 8px rise; visible 2.3s."
+      },
+      {
+        "name": "hero-draw",
+        "value": "1100ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Hub hero schematic detail draw."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "640px"
+      },
+      {
+        "name": "hub-stack",
+        "value": "900px"
+      },
+      {
+        "name": "bench-stack",
+        "value": "1120px"
+      },
+      {
+        "name": "lane-tighten",
+        "value": "1320px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one large green fill: copies the full console command.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"11\" height=\"11\" rx=\"2\"></rect><path d=\"M5 15V5a2 2 0 0 1 2-2h10\"></path></svg><span>Copy full build</span></button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;padding:0 12px;border:1px solid #39ff88;border-radius:8px;background:#39ff88;color:#02110a;font-family:\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,-apple-system,sans-serif;font-size:12px;font-weight:600;letter-spacing:.01em;cursor:pointer;transition:background .14s ease,border-color .14s ease,transform .06s ease}.ds-btn-primary:hover{background:#63ffa3;border-color:#63ffa3}.ds-btn-primary:active{transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:2px solid #72d6ff;outline-offset:2px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Tinted secondary action for copy-item and drawer controls.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\"><span>Copy item</span></button>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;padding:0 12px;border:1px solid rgba(126,226,162,.3);border-radius:8px;background:rgba(57,255,136,.06);color:#d7ffe2;font-family:\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,-apple-system,sans-serif;font-size:12px;font-weight:600;letter-spacing:.01em;cursor:pointer;transition:background .14s ease,border-color .14s ease,transform .06s ease}.ds-btn-ghost:hover{border-color:rgba(57,255,136,.52);background:rgba(57,255,136,.12)}.ds-btn-ghost:active{transform:translateY(1px)}.ds-btn-ghost:focus-visible{outline:2px solid #72d6ff;outline-offset:2px}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Mono search with an icon, a slash hint, and a cyan-ring focus.",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"></circle><path d=\"M20 20l-3.5-3.5\"></path></svg><input type=\"search\" placeholder=\"Search builds or parts\" autocomplete=\"off\" spellcheck=\"false\" aria-label=\"Search builds or parts\"><kbd>/</kbd></label>",
+      "css": ".ds-search{position:relative;display:block;width:260px}.ds-search>svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:#9dc4ab;pointer-events:none}.ds-search input{width:100%;height:36px;padding:0 34px 0 31px;border:1px solid rgba(126,226,162,.3);border-radius:8px;background:rgba(0,0,0,.28);color:#d7ffe2;font-family:ui-monospace,\"Cascadia Mono\",\"SFMono-Regular\",Consolas,monospace;font-size:12px;outline:none}.ds-search input::placeholder{color:#7fa68c;opacity:1}.ds-search input:focus{border-color:#72d6ff;box-shadow:0 0 0 1px rgba(114,214,255,.35)}.ds-search kbd{position:absolute;right:8px;top:50%;transform:translateY(-50%);font-family:ui-monospace,\"Cascadia Mono\",\"SFMono-Regular\",Consolas,monospace;font-size:11px;color:#9dc4ab;border:1px solid rgba(126,226,162,.16);border-radius:4px;padding:1px 5px;background:rgba(0,0,0,.3)}"
+    },
+    {
+      "name": "Rail Item",
+      "kind": "nav",
+      "refersTo": "rail-item-active",
+      "description": "Weapon preset row with a 4px current marker and an amber stat echo.",
+      "html": "<button class=\"ds-rail-item ds-is-current\" type=\"button\"><span class=\"ds-rail-name\">Honey</span><span class=\"ds-rail-stat\">59.3/0</span></button>",
+      "css": ".ds-rail-item{appearance:none;display:flex;align-items:center;gap:9px;width:100%;padding:7px 14px;border:0;background:none;color:#d7ffe2;text-align:left;cursor:pointer;font-family:\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,-apple-system,sans-serif}.ds-rail-item::before{content:\"\";width:4px;height:4px;flex:none;background:transparent;border-radius:1px}.ds-rail-item:hover{background:rgba(57,255,136,.055)}.ds-rail-item.ds-is-current{background:rgba(57,255,136,.11)}.ds-rail-item.ds-is-current::before{background:#39ff88}.ds-rail-name{font-size:13px;font-weight:600;letter-spacing:.005em}.ds-rail-stat{margin-left:auto;font-family:ui-monospace,\"Cascadia Mono\",\"SFMono-Regular\",Consolas,monospace;font-size:11px;color:rgba(255,202,107,.78);white-space:nowrap}.ds-rail-item:focus-visible{outline:2px solid #72d6ff;outline-offset:-2px}"
+    },
+    {
+      "name": "Schematic Slot Node",
+      "kind": "custom",
+      "refersTo": "schematic-slot",
+      "description": "The signature branch label; a compact card wired to the weapon silhouette.",
+      "html": "<button class=\"ds-slot ds-is-selected\" type=\"button\"><span class=\"ds-slot-k\">Barrel</span><span class=\"ds-slot-name\">Honey Badger 7 Inch barrel</span><span class=\"ds-slot-x\">×2</span></button>",
+      "css": ".ds-slot{position:relative;display:flex;flex-direction:column;gap:2px;width:100%;max-width:174px;padding:7px 9px;border:1px solid rgba(126,226,162,.2);border-radius:8px;background:rgba(4,8,6,.86);color:#d7ffe2;text-align:left;cursor:pointer;transition:border-color .14s ease,background .14s ease,transform .14s ease}.ds-slot:hover{border-color:rgba(57,255,136,.48);background:rgba(57,255,136,.07);transform:translateY(-1px)}.ds-slot.ds-is-selected{border-color:#39ff88;background:rgba(57,255,136,.1)}.ds-slot:focus-visible{outline:2px solid #72d6ff;outline-offset:2px}.ds-slot-k{font-family:ui-monospace,\"Cascadia Mono\",\"SFMono-Regular\",Consolas,monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9dc4ab;padding-right:20px}.ds-slot-name{font-family:\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,-apple-system,sans-serif;font-size:12px;line-height:1.28;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.ds-slot-x{position:absolute;top:6px;right:7px;font-family:ui-monospace,\"Cascadia Mono\",\"SFMono-Regular\",Consolas,monospace;font-size:11px;color:#ffca6b}"
+    },
+    {
+      "name": "Stat Reading",
+      "kind": "custom",
+      "refersTo": "stat-reading",
+      "description": "The unlabeled source stat pair in amber mono, with its honesty note.",
+      "html": "<div class=\"ds-stat\" aria-live=\"polite\"><span>59.3</span><i>/</i><span>0</span></div><p class=\"ds-stat-note\">Source reading: the two values are not labelled in the source.</p>",
+      "css": ".ds-stat{display:flex;align-items:baseline;gap:7px;font-family:ui-monospace,\"Cascadia Mono\",\"SFMono-Regular\",Consolas,monospace;font-size:44px;font-weight:600;line-height:1;letter-spacing:-.035em;font-variant-numeric:tabular-nums;color:#ffca6b}.ds-stat i{font-style:normal;font-weight:400;font-size:26px;color:#7fa68c}.ds-stat-note{margin:8px 0 0;max-width:34ch;font-family:\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,-apple-system,sans-serif;font-size:12px;line-height:1.45;color:#9dc4ab}"
+    },
+    {
+      "name": "Branch Card",
+      "kind": "card",
+      "refersTo": "path-card",
+      "description": "Hub entry card into the bench or the item terminal.",
+      "html": "<a class=\"ds-path\" href=\"#\"><strong>Read a build as a schematic</strong><p>Parts hang off the receiver by slot, with the source stat reading and one copy button for the whole command.</p><span class=\"ds-path-cta\">Open the bench<svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg></span></a>",
+      "css": ".ds-path{display:flex;flex-direction:column;gap:9px;padding:22px;border:1px solid rgba(126,226,162,.16);border-radius:12px;background:rgba(5,10,7,.58);color:#d7ffe2;text-decoration:none;overflow:hidden;transition:border-color .16s ease,background .16s ease}.ds-path:hover{border-color:rgba(57,255,136,.46);background:rgba(57,255,136,.055)}.ds-path:focus-visible{outline:2px solid #72d6ff;outline-offset:2px}.ds-path strong{font-family:\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,-apple-system,sans-serif;font-size:clamp(20px,2vw,27px);line-height:1.1;letter-spacing:-.025em;font-weight:650;padding-right:12px}.ds-path p{margin:0;max-width:44ch;color:#9dc4ab;font-family:\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,-apple-system,sans-serif;font-size:12.5px;line-height:1.55}.ds-path-cta{display:flex;align-items:center;gap:7px;margin-top:6px;font-family:\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,-apple-system,sans-serif;font-size:12px;font-weight:600;color:#39ff88}.ds-path-cta svg{transition:transform .16s ease}.ds-path:hover .ds-path-cta svg{transform:translateX(3px)}"
+    },
+    {
+      "name": "Category Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Inline category chip next to the build name.",
+      "html": "<span class=\"ds-badge\">Rifles</span>",
+      "css": ".ds-badge{display:inline-flex;align-items:center;height:22px;padding:0 7px;border:1px solid rgba(126,226,162,.3);border-radius:4px;font-family:ui-monospace,\"Cascadia Mono\",\"SFMono-Regular\",Consolas,monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9dc4ab;white-space:nowrap}"
+    },
+    {
+      "name": "Variant Switch",
+      "kind": "custom",
+      "refersTo": "nav-link-active",
+      "description": "Segmented long/short option selector with per-option stat echoes.",
+      "html": "<div class=\"ds-seg\" role=\"group\" aria-label=\"Build option\"><button type=\"button\" aria-pressed=\"true\">Long <span class=\"ds-seg-stat\">44.3/10</span></button><button type=\"button\" aria-pressed=\"false\">Short <span class=\"ds-seg-stat\">47.8/13</span></button></div>",
+      "css": ".ds-seg{display:inline-flex;border:1px solid rgba(126,226,162,.3);border-radius:8px;overflow:hidden;background:rgba(0,0,0,.24)}.ds-seg button{appearance:none;display:flex;align-items:center;gap:7px;border:0;background:none;color:#9dc4ab;padding:7px 10px;font-family:ui-monospace,\"Cascadia Mono\",\"SFMono-Regular\",Consolas,monospace;font-size:12px;cursor:pointer;white-space:nowrap}.ds-seg button+button{border-left:1px solid rgba(126,226,162,.16)}.ds-seg button:hover{color:#d7ffe2;background:rgba(57,255,136,.06)}.ds-seg button[aria-pressed=\"true\"]{color:#d7ffe2;background:rgba(57,255,136,.11);box-shadow:inset 0 -2px 0 #39ff88}.ds-seg button:focus-visible{outline:2px solid #72d6ff;outline-offset:-2px}.ds-seg-stat{color:#7fa68c;font-size:11px}.ds-seg button[aria-pressed=\"true\"] .ds-seg-stat{color:#72d6ff}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Armorer's Terminal",
+    "overview": "The site is an instrument on a dark workbench, not a game UI. Its primary surface is a three-lane bench: a weapon rail on the left, a dot-grid stage in the center where a line-drawn weapon sits inside a tree of hairline traces, and a readout lane on the right that ends in the command the player copies. The hub is the same instrument seen from the door: one display headline, one line schematic, and two branch cards into the bench and the terminal. Everything is near-black, green-tinted, and dense, but the density is ordered — rail, stage, readout — so the loadout can be read before a single line of the command.\n\nThe palette assigns jobs instead of decorating. Phosphor green is the machine (structure, selection, action); cyan is every identifier the player must trust or copy exactly; amber is every measurement. Names and prose are set in the OS's own sans because the site may never fetch a font; every ID, field label, and number is monospace. The result is a dual voice — human names, machine data — that stays legible in two languages without translating a single item ID.\n\nThe world's refusals are confirmed by both the direction contract and the build: no glass or backdrop blur, no outer glow, no gradient text, no game renders or icon illustrations standing in for the schematic. Depth is tonal and linear, never cast. The loudest element on the bench is the measurement readout; the only large green fill is the copy button. Those two signals never multiply: one reading and one copy action per view.",
+    "keyCharacteristics": [
+      "Near-black green-tinted ground (#030504), one panel step lighter (#050a07), hairline structure",
+      "Green system signal, cyan identifiers, amber measurements — no fourth accent",
+      "System sans for names and prose; monospace for every ID, label, and measurement",
+      "Three-lane bench on desktop, stacked bench plus fixed copy bar on narrow screens",
+      "Dot-grid schematic stage with 1px curved branch traces and compact slot nodes",
+      "Compact corners (3–12px), flat-by-default surfaces, a single 58px topbar offset"
+    ],
+    "rules": [
+      {
+        "name": "The Three-Signal Rule",
+        "body": "Green is the system and the action, cyan is an identifier, amber is a measurement. No screen adds a fourth accent hue, and no value swaps channels: a stat never turns green, an ID never turns amber, a selected border never turns cyan.",
+        "section": "colors"
+      },
+      {
+        "name": "The Near-Black Ground Rule",
+        "body": "Ground and panel stay within one step of each other (#030504 to #050a07), and tinted washes never exceed 11% alpha. A full green surface fill is reserved for the primary copy button, the skip link, and text selection; everything else signals with 1px lines and washes.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono-Means-Data Rule",
+        "body": "Anything copied, typed, measured, or identified is monospace with tabular numerals; names and prose are sans. Setting a weapon name in mono is a category error, and setting an item ID in sans is an offence against copyability.",
+        "section": "typography"
+      },
+      {
+        "name": "The Uppercase-Is-A-Label Rule",
+        "body": "Uppercase plus 0.08–0.16em tracking belongs to 11px mono field and section labels only. Display headlines and weapon names stay sentence case, in both languages.",
+        "section": "typography"
+      },
+      {
+        "name": "The Bilingual Tracking Rule",
+        "body": "Switching to Chinese relaxes display tracking (-0.04em to -0.02em), opens its line-height (0.98 to 1.08), and shrinks its clamp; mono labels keep Latin tracking. Section names and UI strings translate — weapon names and item IDs never do.",
+        "section": "typography"
+      },
+      {
+        "name": "The Three-Lane Rule",
+        "body": "A wide bench has exactly rail, stage, readout. The center lane is reserved for the schematic — no data table, no second list, no marketing block displaces the weapon.",
+        "section": "layout"
+      },
+      {
+        "name": "The One-Click-Away Rule",
+        "body": "The full command is always rendered or fixed on screen: last block of the readout on desktop, a fixed copy bar on narrow screens. Never bury the copy action behind a tab or an overflow menu.",
+        "section": "layout"
+      },
+      {
+        "name": "The 58px Constant Rule",
+        "body": "The topbar is 58px tall and every sticky offset derives from it. A new sticky surface uses the same constant rather than inventing a second header height.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Cards, rails, readouts, and the stage are flat at rest. If a new surface needs to separate, lift the tone by one step or draw a hairline — do not add a drop shadow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The No-Glow Rule",
+        "body": "Selection and focus are a 1px border, a wash of 11% or less, and a 2px cyan outline. Outer glows, halo shadows, and backdrop blur are refused.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Compact-Corner Rule",
+        "body": "Controls stop at 7–8px, the stage at 10px, hub cards at 12px. Pills belong to scrollbar thumbs and nothing else; no rounded-full buttons, inputs, or tags.",
+        "section": "shapes"
+      },
+      {
+        "name": "The 1px Structure Rule",
+        "body": "Every structural edge starts as a 1px hairline at 16% green. Interactive borders start at 30% and may escalate to full green on hover or selection; panels are never framed at 2px. The only 2px rules are the active-tab underline and the focus outline.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Selection-Is-A-Wash Rule",
+        "body": "Selected and current states are a 1px green border plus an 11% green wash, and on horizontal tabs a 2px inset underline. Text does not invert to green-on-black except on the primary button and skip link; the selection marker is a 4px square, not a background fill.",
+        "section": "components"
+      },
+      {
+        "name": "The Diagram-Disclaimer Rule",
+        "body": "Any schematic carries the SCHEMATIC · NOT A GAME RENDER caption and the bench-foot sentence that grouping is inferred and in-game success is unverified. A schematic without both is off-system.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do draw structure with the hairline tokens (rgba(126,226,162,0.16) for dividers, 0.3 for interactive borders) before reaching for a fill or shadow.",
+      "Do keep measurements amber and tabular (font-variant-numeric: tabular-nums; the pair is 44px/600 mono), and keep identifiers cyan in mono at 11px.",
+      "Do keep every copied ID character-exact — casing, underscores, and game-side spellings intact — and never translate weapon names or IDs.",
+      "Do show state with more than color: the rail adds a 4px dot, tabs add an inset 2px underline, inputs add a 1px ring.",
+      "Do keep the global focus treatment: 2px cyan outline, 2px offset, 4px radius.",
+      "Do respect prefers-reduced-motion: the trace draw, node entrance, drawer, toast, and hero draw all resolve instantly.",
+      "Do keep prose measures tight — 34ch for the stat note, 44ch for card copy, 56ch for hub intro, 62ch for the bench foot, 78ch for the hub footer.",
+      "Do use the primary green button once per view: copy full build in the readout, or copy command in the mobile bar.",
+      "Do keep the OS font stacks; the site must work offline with no external font request."
+    ],
+    "donts": [
+      "Don't add glass, backdrop blur, outer glow, or gradient text. Existing gradients are functional — sticky group-title fades, the dot-grid mask, the stage vignette — never decoration or text fills.",
+      "Don't put game screenshots, weapon renders, or illustrated icons on the bench; the only weapon imagery is the authored line schematic.",
+      "Don't invent a label or unit for the stat pair, or a compatibility claim for a slot; show the source reading and the unverified note.",
+      "Don't use green for a stat value, amber for an identifier, or cyan for an action; the three signal channels do not swap.",
+      "Don't introduce a light theme, a second surface family, or a saturated panel fill.",
+      "Don't set weapon or build names in uppercase or in mono, and don't add letterspacing to display headlines.",
+      "Don't use pill radii on buttons, inputs, or tags; 99px is for scrollbar thumbs only.",
+      "Don't replace the 1px hairline with a 2px frame or a cast shadow to create hierarchy; use the one-step tonal lift instead."
+    ]
+  }
+}

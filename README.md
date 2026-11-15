@@ -1,6 +1,6 @@
 # Incursion Red River Item List
 
-Browse item IDs and copy `AddItem` console commands for Incursion Red River.
+Browse item IDs, read community weapon builds as slot-by-slot schematics, and copy `AddItem` console commands for Incursion Red River.
 
 ## Use the terminal
 
@@ -16,6 +16,19 @@ Open the repository's GitHub Pages website, or download **Incursion_Terminal.htm
 Search and copying run entirely in your browser, including on GitHub Pages. No data is sent to a server. Browsing and folding also work without JavaScript; search and click-to-copy require it. Clipboard access depends on your browser's permissions, with a fallback for local files.
 
 **Item_List.htm** contains the same catalog as the terminal in plain-text form. **Weapon builds by Firestar.htm** retains the original builds, with corrected command IDs; the builds and their stats have not been retested.
+
+## Use the build bench
+
+Open **builds.html**, or follow **Build bench** from the home page. The bench renders Firestar's **38 weapon presets** and **3 accessory kits** as a slot-by-slot schematic: parts are grouped around a weapon diagram, with the source stat reading, per-part copy buttons and one button for the full command. The source supplies **42 command lines** in total, including long/short options and the accessory kits.
+
+- The slot grouping and the weapon diagram are reading aids authored for this page. They are not extracted from the game and do not establish that a part fits.
+- Stat values are shown exactly as the source supplies them, for example `59.3/0`. The source does not record what the two values mean.
+- Long/short options either share one command (the source supplies both barrel choices in one line) or have separate commands; the page states which.
+- A preset whose command omits the weapon item is flagged in the receiver line instead of being silently patched.
+- Search matches weapon names, section names and part IDs. Every copy button copies the exact source ID, including duplicates.
+- The page is self-contained, needs no server or external fonts, and supports **English** and **Simplified Chinese**; the preference is stored in `localStorage`. A `?lang=en` or `?lang=zh` URL parameter is used when no preference is saved, so links can pin a language. The item terminal itself remains English, and item IDs and weapon names are never translated.
+
+`builds.html` is generated from **Weapon builds by Firestar.htm** by the scripts in `tools/`; do not edit it by hand.
 
 ## Catalog source and corrections
 
@@ -75,16 +88,19 @@ A repository owner or maintainer needs to enable hosting once:
 
 For a repository named `Incursion-Red-River-Item-List`, the default address is `https://<owner>.github.io/Incursion-Red-River-Item-List/`.
 
-`index.html` forwards the root address to `Incursion_Terminal.html`, preserving existing links and the standalone download. All links are relative so forks and project subpaths work. `.nojekyll` keeps this a plain static site. No Actions deployment workflow is needed.
+`index.html` is a two-entry hub: **Build bench** (`builds.html`) and **Item terminal** (`Incursion_Terminal.html`). All links are relative so forks and project subpaths work. `.nojekyll` keeps this a plain static site. No Actions deployment workflow is needed.
 
 ## Maintain and verify
 
 Edit the item rows in **Incursion_Terminal.html**, keeping each `data-item` value and quantity button accurate. Categories and weapon groups use native `<details>` / `<summary>` elements. Keep their `data-label` values aligned with their headings, and update the displayed item counts when changing a group. Shared items intentionally appear in multiple weapon groups. Preserve the exact source row spelling, keep any explanatory warnings outside `data-item`, and add previous spellings to `data-aliases` when correcting an ID. Update the source snapshot when reconciling a new export; do not relabel an old export as a newer game version.
 
-Run the dependency-free regression checks with Node.js:
+To change the build bench, edit **Weapon builds by Firestar.htm**, then regenerate the page:
 
 ```sh
-node --test tests/terminal.test.cjs
+python tools/build_data.py --check   # audit parsed slots, variants and counts
+python tools/render_builds.py        # writes builds.html from the template
 ```
 
-Also open `Incursion_Terminal.html` in a browser and check keyboard folding, search with no results, clearing search, copy buttons, and a narrow viewport. For an HTTP preview, run `python3 -m http.server 8000` in the repository and open `http://localhost:8000/`.
+The parser preserves every item ID and only normalises a missing `additem` prefix or quantity (`additem <id> 1`). Slot grouping is a name-based heuristic; review `--check` output when adding parts. `tools/builds-template.html` holds the page shell and is the file to edit for UI changes. Requires Python 3.9+; no third-party packages.
+
+There is currently no checked-in automated test suite. Open `Incursion_Terminal.html` and `builds.html` in a browser and check search, keyboard folding, copy buttons, variant switching, language switching and a narrow viewport. For an HTTP preview, run `python -m http.server 8000` in the repository and open `http://localhost:8000/`.
